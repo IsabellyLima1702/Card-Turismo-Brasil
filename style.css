@@ -1,5 +1,5 @@
 :root{
-    --cor-fundo: rgb(248, 214, 151);
+    --cor-fundo: rgb(105, 197, 240);
 }
 
 *{
@@ -52,8 +52,27 @@ input{
     height: 30px;
 }
 
-button{
-    padding: 8px 12px;
-    font-size: 24px;
-    cursor: pointer;
+.argumento{
+    display: flex;
+    width: 100%;
+    height: 25vh;
+}
+.card{
+    height: 60vh ;
+    width: 50vh;
+    background-color: pink;
+}
+
+.card img{
+    height: 50%;
+    width: 100%;
+}
+.card h3{
+    height: 5vh;
+}
+.card h1{
+    height: 6vh;
+}
+.card p{
+    height: 8vh;
 }
