@@ -1,0 +1,59 @@
+:root{
+    --cor-fundo: rgb(248, 214, 151);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol, li{
+    list-style: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo);
+    transition: background-color 0.5s;
+}
+
+input{
+    padding: 8px 12px;
+    font-size: 24px;
+}
+
+.menu{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+    padding: 16px;
+}
+
+.menu a{
+    padding: 8px;
+    transition: .5s;
+}
+
+.menu a:hover{
+    background-color: var(--cor-hover);
+}
+
+.menu img{
+    height: 30px;
+}
+
+button{
+    padding: 8px 12px;
+    font-size: 24px;
+    cursor: pointer;
+}
