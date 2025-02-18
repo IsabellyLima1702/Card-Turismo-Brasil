@@ -40,7 +40,7 @@ const categorias = [
     {nome:'Tocantins',  img: 'tocantins.webp', titulo: 'Jalapão', descricao: 'O Jalapão  oferece as mais diversas paisagens naturais, entre elas fervedouros de águas cristalinas, cachoeiras e dunas. É um destino lindo e muito diferente, ideal para fugir dos grandes centros urbanos e relaxar dentre as belezas do cerrado.'},
     {nome:'Rio de Janeiro', img: 'rio.webp', titulo: 'Cristo Redentor', descricao:'A Estátua do Cristo Redentor não é apenas uma obra de arte monumental; é um testemunho da fé e da cultura brasileira. Esta estátua art déco de 38 metros de altura tem sido um símbolo de paz e acolhimento desde sua inauguração em 1931.'},
     {nome:'Amazonas',  img: 'amazonia.jpeg', titulo: 'Teatro Amazonas', descricao: 'O edifício renascentista, que hoje é tombado como Patrimônio Histórico pelo IPHAN, foi construído em 1896 para atender a uma exigência da época: ser um lugar onde companhias de espetáculos estrangeiras pudessem se apresentar para a elite local.'},
-    {nome:'Maranhão',  img: 'maranhao.png', titulo: 'Lençóis Maranhenses', descricao: 'É conhecido por sua vasta paisagem desértica de altas dunas de areia branca e lagoas sazonais de águas pluviais. Lagoa Azul e Lagoa Bonita são duas das maiores lagoas. é o principal destino indutor do turismo no estado. '},
+    {nome:'Maranhão',  img: 'maranhao.png', titulo: 'Lençóis Maranhenses', descricao: 'É conhecido por sua vasta paisagem desértica de altas dunas de areia branca e lagoas sazonais de águas pluviais. Lagoa Azul e Lagoa Bonita são duas das maiores lagoas. É o principal destino indutor do turismo no estado. '},
 
 ]
 function novoCard(local){
