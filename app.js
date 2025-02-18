@@ -1,28 +1,28 @@
-"use strict"
-//"use strict" serve para corrigir os erros básicos
+'use strict'
 
+const estado = [
+    {nome:'PE', cor: 'yellow', icon: 'ilha.png'},
+    {nome:'TO', cor: 'purple', icon: 'jalapao.png'},
+    {nome:'RJ', cor: 'blue', icon: 'redentor.png'}, 
+    {nome:'AM', cor: 'pink', icon: 'teatro.png'},
+    {nome:'MA', cor: 'orange', icon: 'lencois.png'}
 
-
-const disciplinas = [
-    {nome: 'PE', cor: 'red', icon: 'ilha.png'},
-    {nome: 'TO', cor: 'blue', icon:'jalapao.png'},
-    {nome: 'MA', cor: 'yellow', icon: 'lencois.png'},
-    {nome: 'RJ',  cor: 'pink', icon: 'redentor.png'},
-    {nome: 'AM',  cor: 'pink', icon: 'teatro.png'}
- 
 ]
 
-function criarItemMenu(disciplinas){
+function criarItemMenu (estados){
     const listaMenu = document.getElementById('menu')
     const novoItem = document.createElement('li')
-    const novoLink = document.createElement('a')
     const novoImagem = document.createElement('img')
+    const novoLink = document.createElement('a')
+    
 
     novoLink.href = '#'
-    novoLink.textContent = disciplinas.nome
-    novoLink.style = `--cor-hover: ${disciplinas.cor}`
 
-    novoImagem.src = `./icons/${disciplinas.icon}`
+    novoLink.textContent = estados.nome
+
+    novoLink.style = `--cor-houver: ${estados.cor}`
+
+    novoImagem.src = `./icons/${estados.icon}`
 
     novoItem.appendChild(novoImagem)
 
@@ -31,40 +31,57 @@ function criarItemMenu(disciplinas){
     listaMenu.appendChild(novoItem)
 }
 
-disciplinas.forEach(criarItemMenu)
+estado.forEach(criarItemMenu)
+
 
 
 const categorias = [
-    
-    {nome: 'Rio de Janeiro', titulo: 'Cristo Redentor', icon: 'rio.webp', descricao: 'A Estátua do Cristo Redentor não é apenas uma obra de arte monumental; é um testemunho da fé e da cultura brasileira. Erguida no topo do Morro do Corcovado, a 710 metros acima do nível do mar, esta estátua art déco de 38 metros de altura tem sido um símbolo de paz e acolhimento desde sua inauguração em 1931.'},
-    {nome: 'Amazonas', titulo: 'Teatro Amazonas',  icon:'amazonia.jpeg', descricao: 'O edifício renascentista, que hoje é tombado como Patrimônio Histórico pelo IPHAN, foi construído em 1896 para atender a uma exigência da época: ser um lugar onde companhias de espetáculos estrangeiras pudessem se apresentar para a elite local.'},
-    {nome: 'Tocantins', titulo: 'Jalapão', icon: 'tocantins.webp', descricao: 'O Jalapão  oferece as mais diversas paisagens naturais, entre elas fervedouros de águas cristalinas, cachoeiras e dunas. É um destino lindo e muito diferente, ideal para fugir dos grandes centros urbanos e relaxar dentre as belezas do cerrado.'},
-    {nome: 'Pernambuco', titulo: 'Fernando de Noronha', icon: 'pe-fernando.avif', descricao: 'Com praias deslumbrantes e um atmosfera tranquila, é o tipo de lugar que você pode ir várias e várias vezes e sempre se impressionará com sua beleza. A natureza bem preservada, fora e dentro da água e a sensação de estar sempre seguro são qualidades que fazem os visitantes se apaixonarem por Fernando de Noronha.'},
-    {nome: 'Maranhão', titulo: 'Lençóis Maranhenses',  icon: 'maranhao.png', descricao: 'As dunas de areia e lagoas com águas cristalinas formadas pelas chuvas nos Lençóis Maranhenses tornam o lugar tão belo que já foi várias vezes cenário de filmes. A região dos Lençóis oferece uma paisagem realmente única e surpreendente!'}
+    {nome: 'Pernambuco',  img: 'pe-fernando.avif', titulo:'Fernando de Noronha', descricao: 'A natureza bem preservada, fora e dentro da água e a sensação de estar sempre seguro são qualidades que fazem os visitantes se apaixonarem por Fernando de Noronha. Tartarugas, arraias, golfinhos e tubarões de recife nadam em suas águas mornas. '},
+    {nome:'Tocantins',  img: 'tocantins.webp', titulo: 'Jalapão', descricao: 'O Jalapão  oferece as mais diversas paisagens naturais, entre elas fervedouros de águas cristalinas, cachoeiras e dunas. É um destino lindo e muito diferente, ideal para fugir dos grandes centros urbanos e relaxar dentre as belezas do cerrado.'},
+    {nome:'Rio de Janeiro', img: 'rio.webp', titulo: 'Cristo Redentor', descricao:'A Estátua do Cristo Redentor não é apenas uma obra de arte monumental; é um testemunho da fé e da cultura brasileira. Esta estátua art déco de 38 metros de altura tem sido um símbolo de paz e acolhimento desde sua inauguração em 1931.'},
+    {nome:'Amazonas',  img: 'amazonia.jpeg', titulo: 'Teatro Amazonas', descricao: 'O edifício renascentista, que hoje é tombado como Patrimônio Histórico pelo IPHAN, foi construído em 1896 para atender a uma exigência da época: ser um lugar onde companhias de espetáculos estrangeiras pudessem se apresentar para a elite local.'},
+    {nome:'Maranhão',  img: 'maranhao.png', titulo: 'Lençóis Maranhenses', descricao: 'É conhecido por sua vasta paisagem desértica de altas dunas de areia branca e lagoas sazonais de águas pluviais. Lagoa Azul e Lagoa Bonita são duas das maiores lagoas. é o principal destino indutor do turismo no estado. '},
 
 ]
-function criarItemMenu(local){
-    const listaCategorias = document.getElementById('categorias')
-    const novoCard = document.createElement('div')
-    novoCard.classList.add('card') 
-    
-    novoLink.href = '#'
-    novoLink.textContent = categorias.nome
-    novoLink.style = `--cor-hover: ${local.cor}`
+function novoCard(local){
+    const listaCard = document.getElementById('argumentos')
+    const localCard = document.createElement('div')
+    localCard.classList.add('card')
 
-    novoImagem.src = `./icons/${local.icon}`
+    const novoImg = document.createElement('img')
+    novoImg.src = `./img/${local.img}`
 
-    novoItem.textContent = criarItemMenu.h3
-    novoItem.textContent = criarItemMenu.h1
+    const novaCobertura=document.createElement('h2')
+    novaCobertura.textContent = local.titulo
 
+    const novoLugar = document.createElement('h3')
+    novoLugar.textContent= local.nome
 
-    novoItem.appendChild(novoImagem)
+    const novaDescricao = document.createElement('p')
+    novaDescricao.textContent = local.descricao
 
-    novoItem.appendChild(novoLink)
+    localCard.appendChild(novoLugar)
+    localCard.appendChild(novoImg)
+    localCard.appendChild(novaCobertura)
+    localCard.appendChild(novaDescricao)
 
-    listaMenu.appendChild(novoItem)
+    listaCard.appendChild(localCard)
 }
+categorias.forEach(novoCard)
 
-local.forEach(criarItemMenu)
 
+const botaoTeste = document.getElementById('teste')
 
+function criarElementos(){
+    const body = document.querySelector('body')
+    const novoBotao = document.createElement('button')
+    novoBotao.textContent = 'Saiba Mais'
+
+    body.appendChild(novoBotao)
+    console.log('teste')
+    criarElementos()
+        botaoTeste.addEventListener('click', criarElementos)
+
+    }
+      
+                                           

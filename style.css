@@ -1,7 +1,6 @@
 :root{
-    --cor-fundo: rgb(105, 197, 240);
+    --cor-hover: #c1d3e2;
 }
-
 *{
     padding: 0;
     margin: 0;
@@ -11,6 +10,7 @@
 a{
     text-decoration: none;
     color: inherit;
+    font-size: 20px;
 }
 
 ul, ol, li{
@@ -19,19 +19,12 @@ ul, ol, li{
 
 body{
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-hover);
     transition: background-color 0.5s;
 }
 
-input{
-    padding: 8px 12px;
-    font-size: 24px;
-}
-
 .menu{
-    background-color: black;
+    background-color: rgb(231, 115, 70);
     color: white;
     display: flex;
     justify-content: end;
@@ -41,38 +34,72 @@ input{
 
 .menu a{
     padding: 8px;
+    transition: 0.5s;
+}
+.menu li{
+    display: flex;
+    align-items: center;
+    padding: 2px 80px;
     transition: .5s;
+    cursor: pointer;
 }
 
-.menu a:hover{
+.menu a :hover{
     background-color: var(--cor-hover);
 }
 
 .menu img{
-    height: 30px;
+    height: 50px;
 }
 
-.argumento{
+#argumentos{
     display: flex;
+    height: 100%;
     width: 100%;
-    height: 25vh;
-}
+    padding-left: 2vw;
+    
+}  
+
 .card{
-    height: 60vh ;
-    width: 50vh;
-    background-color: pink;
+    background-color: rgb(250, 195, 123);
+    width: 17.3vw;
+    height: 56vh;
+    border-radius: 1vw;
+    margin-top: 15vh;  
+    margin-left: 1.8vw;   
+}
+
+.card h2{
+    margin-top: 2vh;
+    margin-left: 1vw;
+}
+
+.card p{
+    margin-top: 3vh;
+    margin-left: 1vw ;
+    margin-right: 1vw ;
+    font-size: 1vw;
+}
+
+.card h3{
+    margin-top: 6vh;
+    font-size: 2vh;
 }
 
 .card img{
-    height: 50%;
     width: 100%;
+    height: 20vh;
+    margin-top: -9vh;
+    border-radius: 1vw;
+   
 }
-.card h3{
-    height: 5vh;
-}
-.card h1{
+
+#teste{
+    width: 20vh;
     height: 6vh;
+    color: wheat;
+    background-color: rgb(212, 71, 16);
+    margin-top: 5vh;
+    margin-left: 98.5vh;
 }
-.card p{
-    height: 8vh;
-}
+
