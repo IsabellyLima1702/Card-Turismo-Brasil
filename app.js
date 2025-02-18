@@ -60,9 +60,10 @@ function novoCard(local){
     const novaDescricao = document.createElement('p')
     novaDescricao.textContent = local.descricao
 
-    localCard.appendChild(novoLugar)
+    
     localCard.appendChild(novoImg)
     localCard.appendChild(novaCobertura)
+    localCard.appendChild(novoLugar)
     localCard.appendChild(novaDescricao)
 
     listaCard.appendChild(localCard)
